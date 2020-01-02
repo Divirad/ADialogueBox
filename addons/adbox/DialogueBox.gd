@@ -12,7 +12,7 @@ Author: Max Schmitt
 extends NinePatchRect
 class_name DialogueBox, "icon.png"
 
-export var message_sound : Resource
+export var message_sound : AudioStreamSample
 export var font : Font
 export var action_name : String
 export var wait_time = 0.2
@@ -34,66 +34,57 @@ var ShowTimer : Timer
 
 var block_box_timer : bool
 
+var percent_addition : float
+
 signal dialogue_exit()
 
 func _enter_tree():
-	audio = AudioStreamPlayer.new()
-	audio.stream = message_sound
-	add_child(audio)
-	
 	TextBox = load("res://addons/adbox/textbox.tscn").instance()
-	var container = Container.new()
+	TextBox.add_font_override("normal_font", font)
 	
+	var container = Container.new()
 	container.anchor_right = 1
 	container.anchor_bottom = 1
-	
 	container.margin_left = 10
 	container.margin_top = 10 
 	container.margin_right = -10
 	container.margin_bottom = -10
 	
-	add_child(container)
-	
-	container.add_child(TextBox)
-	#TextBox.visible_characters = -1
-	#TextBox.percent_visible = 1#0.05
-	#TextBox.scroll_active = true
-	#TextBox.anchor_right = 1
-	#TextBox.anchor_bottom = 1
-	
-	#TextBox.margin_left = 10
-	#TextBox.margin_top = 10 
-	#TextBox.margin_right = -10
-	#TextBox.margin_bottom = -10)
-	#TextBox.add_font_override("normal_font", font)
-	
-	print("2")
 	InputBlocker = Timer.new()
-	InputBlocker.connect("timeout", self, "_on_InputBlocker_timeout")
+	
 	InputBlocker.autostart = true
 	InputBlocker.one_shot = true
 	InputBlocker.wait_time = block_time
-	add_child(InputBlocker)
-	print("3")
+
 	ShowTimer = Timer.new()
 	ShowTimer.autostart = true
-	ShowTimer.connect("timeout", self, "_on_Timer_timeout")
 	ShowTimer.wait_time = wait_time
-	add_child(ShowTimer)
-	print("4")
+	
+	add_child(container)
+	container.add_child(TextBox)
+	
+	TextBox = container.get_node(TextBox.name)
+	container.add_child(InputBlocker)
+	container.add_child(ShowTimer)
+	
+	InputBlocker.connect("timeout", self, "_on_InputBlocker_timeout")
+	ShowTimer.connect("timeout", self, "_on_Timer_timeout")
+
+func _ready():
+	message_sound.loop_mode = message_sound.LOOP_DISABLED
+	message_sound.loop_begin = 0
+	message_sound.loop_end = 0
+	
+	audio = AudioStreamPlayer.new()
+	audio.stream = message_sound
+	add_child(audio)
 
 func _process(delta):
-	#process(delta)
-	pass
-	
-func process(delta):
 	if hidden:
 		return
-	
-	if hidden and !audio.playing && audioShouldPlay:
-		audio.play(0)
-		
-	if hidden and Input.is_action_just_pressed(action_name):
+
+func _input(event):
+	if Input.is_action_just_pressed(action_name):
 		if wait == true:
 			if TextBox.percent_visible != 1:
 				TextBox.percent_visible = 1
@@ -117,13 +108,14 @@ func talk(textarray : Array):
 	block_walk = true
 	num = 0
 	TextBox.text = text[num]
-	print("start")
 	show()
 	to_beginning()
 
 func to_beginning():
+	percent_addition = 1 / float(TextBox.text.length())
+	
 	ShowTimer.wait_time = wait_time
-	TextBox.percent_visible = 0.05
+	TextBox.percent_visible = 0.01
 	
 	wait = false
 	hidden = false
@@ -133,15 +125,17 @@ func to_beginning():
 
 func _on_Timer_timeout():
 	if TextBox.percent_visible < 1:
-		TextBox.percent_visible += .01
+		TextBox.percent_visible += percent_addition 
+		audio.play(0)
 	else:
 		audioShouldPlay = false
 		audio.stop()
+		ShowTimer.stop()
 	wait = true
 
 func _on_InputBlocker_timeout():
 	hidden = true
 	block_walk = false
-	ShowTimer.stop()
+	InputBlocker.stop()
 	audio.stop()
 	emit_signal("dialogue_exit")
