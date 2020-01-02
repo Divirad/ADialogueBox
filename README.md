@@ -1,11 +1,12 @@
 # ADialogueBox 
 
+[![Version badge](https://img.shields.io/badge/Version-v0.2-green.svg)](http://paypal.me/divirad)  
 ![](https://img.shields.io/github/issues/Divirad/ADialogueBox)
 ![](https://img.shields.io/github/forks/Divirad/ADialogueBox)
 ![](https://img.shields.io/github/stars/Divirad/ADialogueBox)
 ![](https://img.shields.io/github/license/Divirad/ADialogueBox) <br>
-[![Version badge](https://img.shields.io/badge/Version-v0.1-green.svg)](http://paypal.me/divirad) 
-[![PayPal badge](https://img.shields.io/badge/Donate-PayPal-blue.svg)](http://paypal.me/divirad)
+[![Version badge](https://img.shields.io/badge/Made_by-Divirad-inactive.svg)](http://paypal.me/divirad) 
+[![PayPal badge](https://img.shields.io/badge/Donate-PayPal-blue.svg)](http://paypal.me/divirad) <br>
 
 ![Icon](https://raw.githubusercontent.com/Divirad/ADialogueBox/master/icon.png)
 
