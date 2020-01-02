@@ -17,6 +17,7 @@ export var font : Font
 export var action_name : String
 export var wait_time = 0.2
 export var block_time = 0.3
+export var frames : SpriteFrames
 var time : float
 
 var text = []
