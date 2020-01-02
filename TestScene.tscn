@@ -33,9 +33,9 @@ action_name = "ui_accept"
 wait_time = 0.08
 
 [node name="Label" type="Label" parent="."]
-margin_left = 248.712
+margin_left = 242.682
 margin_top = 51.2497
-margin_right = 776.712
+margin_right = 802.682
 margin_bottom = 67.2497
 custom_fonts/font = SubResource( 2 )
-text = "Press down to trigger the Message"
+text = "Press Escape to trigger the message"

@@ -39,7 +39,9 @@ export var font : Font
 export var action_name : String
 export var wait_time = 0.2
 export var block_time = 0.3
-export var frames : SpriteFrames
+#export var frames : SpriteFrames
+export var margin_top_bottom = 15
+export var margin_left_right = 15
 var time : float
 
 var text = []
@@ -68,10 +70,10 @@ func _enter_tree():
 	var container = Container.new()
 	container.anchor_right = 1
 	container.anchor_bottom = 1
-	container.margin_left = 10
-	container.margin_top = 10 
-	container.margin_right = -10
-	container.margin_bottom = -10
+	container.margin_left = margin_left_right
+	container.margin_top = margin_top_bottom
+	container.margin_right = -margin_left_right
+	container.margin_bottom = -margin_top_bottom
 	
 	InputBlocker = Timer.new()
 	
