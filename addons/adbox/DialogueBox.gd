@@ -92,6 +92,7 @@ func _enter_tree():
 	
 	InputBlocker.connect("timeout", self, "_on_InputBlocker_timeout")
 	ShowTimer.connect("timeout", self, "_on_Timer_timeout")
+	hide()
 
 func _ready():
 	message_sound.loop_mode = message_sound.LOOP_DISABLED
