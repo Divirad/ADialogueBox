@@ -7,3 +7,17 @@ export_presets.cfg
 # Mono-specific ignores
 .mono/
 data_*/
+
+addons/adbox/icon.png.import
+
+icon.png.import
+
+Message.ogg.import
+
+Style01.png.import
+
+Style02.png.import
+
+Style03.png.import
+
+Style04.png.import

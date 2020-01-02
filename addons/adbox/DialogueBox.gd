@@ -36,13 +36,25 @@ var block_box_timer : bool
 
 signal dialogue_exit()
 
-func _ready():
+func _enter_tree():
 	audio = AudioStreamPlayer.new()
 	audio.stream = message_sound
 	add_child(audio)
 	
-	TextBox = load_node("res://addons/adbox/TextBox.tscn").instance()
-	add_child(TextBox)
+	TextBox = load("res://addons/adbox/textbox.tscn").instance()
+	var container = Container.new()
+	
+	container.anchor_right = 1
+	container.anchor_bottom = 1
+	
+	container.margin_left = 10
+	container.margin_top = 10 
+	container.margin_right = -10
+	container.margin_bottom = -10
+	
+	add_child(container)
+	
+	container.add_child(TextBox)
 	#TextBox.visible_characters = -1
 	#TextBox.percent_visible = 1#0.05
 	#TextBox.scroll_active = true
