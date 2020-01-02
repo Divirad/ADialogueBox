@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://TestScene.gd" type="Script" id=1]
-[ext_resource path="res://resources/style/Style03.png" type="Texture" id=2]
+[ext_resource path="res://resources/style/Style01.png" type="Texture" id=2]
 [ext_resource path="res://addons/adbox/DialogueBox.gd" type="Script" id=3]
 [ext_resource path="res://resources/style/Menu_Navigate_00.wav" type="AudioStream" id=4]
 [ext_resource path="res://resources/style/PressStart2P.ttf" type="DynamicFontData" id=5]
@@ -16,10 +16,10 @@ font_data = ExtResource( 5 )
 script = ExtResource( 1 )
 
 [node name="DialogueBox" type="NinePatchRect" parent="."]
-margin_left = 165.978
-margin_top = 88.8158
-margin_right = 865.978
-margin_bottom = 301.816
+margin_left = 283.573
+margin_top = 78.4486
+margin_right = 740.573
+margin_bottom = 291.449
 texture = ExtResource( 2 )
 region_rect = Rect2( 0.0875092, 0.388367, 318.237, 77.4568 )
 patch_margin_left = 13
