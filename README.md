@@ -22,9 +22,9 @@ Activate the plugin. Another class `DialogueBox` is now added to your editor. Yo
 `Font`: the font you want to use. <br>
 `Action Name`: the name of the action to be used to jump to the next message.<br>
 `Wait Time`: The time to wait between each letter.<br>
-`Block Time`: The time in which a dialog box-related input is going to be blocked immediately after the dialog box is closed.
-`Margin Top Bottom`: Margin size of top and bottom
-`Margin Left Right`: Margin size of left and right
+`Block Time`: The time in which a dialog box-related input is going to be blocked immediately after the dialog box is closed.<br>
+`Margin Top Bottom`: Margin size of top and bottom<br>
+`Margin Left Right`: Margin size of left and right<br>
 
 ## Set up in code
 Example:
