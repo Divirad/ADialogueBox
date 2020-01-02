@@ -5,7 +5,7 @@
 ![](https://img.shields.io/github/forks/Divirad/ADialogueBox)
 ![](https://img.shields.io/github/stars/Divirad/ADialogueBox)
 ![](https://img.shields.io/github/license/Divirad/ADialogueBox) <br>
-[![Version badge](https://img.shields.io/badge/Made_by-Divirad-inactive.svg)](http://paypal.me/divirad) 
+[![Author badge](https://img.shields.io/badge/Made_by-Divirad-inactive.svg)](http://divirad.com) 
 [![PayPal badge](https://img.shields.io/badge/Donate-PayPal-blue.svg)](http://paypal.me/divirad) <br>
 
 ![Icon](https://raw.githubusercontent.com/Divirad/ADialogueBox/master/icon.png)
@@ -34,6 +34,9 @@ Example:
 if Input.is_action_just_pressed("ui_down"):
   $DialogueBox.talk(["Message 1","Message 2", "Message 3", "Message 4"])
 ```
+## Signals
+
+`dialogue_exit`: when the dialog box is closed, it sends this signal.
 
 ![](https://raw.githubusercontent.com/Divirad/ADialogueBox/master/docs/screenshot.png)
 
