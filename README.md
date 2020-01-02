@@ -38,6 +38,8 @@ if Input.is_action_just_pressed("ui_down"):
 
 `dialogue_exit`: when the dialog box is closed, it sends this signal.
 
+_________
+
 ![](https://raw.githubusercontent.com/Divirad/ADialogueBox/master/docs/screenshot.png)
 
 _____________________
