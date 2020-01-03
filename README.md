@@ -10,7 +10,8 @@
 
 ![Icon](https://raw.githubusercontent.com/Divirad/ADialogueBox/master/icon.png)
 
-Easy to use dialogue box for all kind of games with not many features.
+Easy to use dialogue box for all kind of games with not many features.<br>
+Improved version from a part of the project [Klengan The Game](https://github.com/klenganthegame/KlenganTheGame).
 
 ## Set up in edtior
 Only the directorie "addons/adbox" is necessary id you want t
