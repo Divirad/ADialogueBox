@@ -4,7 +4,9 @@
 ![](https://img.shields.io/github/issues/Divirad/ADialogueBox)
 ![](https://img.shields.io/github/forks/Divirad/ADialogueBox)
 ![](https://img.shields.io/github/stars/Divirad/ADialogueBox)
-![](https://img.shields.io/github/license/Divirad/ADialogueBox) <br>
+![](https://img.shields.io/github/license/Divirad/ADialogueBox) 
+![](https://img.shields.io/github/downloads/divirad/ADialogueBox/total)<br>
+	
 [![Author badge](https://img.shields.io/badge/Made_by-Divirad-inactive.svg)](http://divirad.com) 
 [![PayPal badge](https://img.shields.io/badge/Donate-PayPal-blue.svg)](http://paypal.me/divirad) <br>
 
