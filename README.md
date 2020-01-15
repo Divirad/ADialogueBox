@@ -2,9 +2,9 @@
 
 [![Version badge](https://img.shields.io/badge/Version-v0.2-green.svg)](http://paypal.me/divirad)  
 ![](https://img.shields.io/github/downloads/divirad/ADialogueBox/total)
+![](https://img.shields.io/github/stars/Divirad/ADialogueBox)
 ![](https://img.shields.io/github/issues/Divirad/ADialogueBox)
 ![](https://img.shields.io/github/forks/Divirad/ADialogueBox)
-![](https://img.shields.io/github/stars/Divirad/ADialogueBox)
 ![](https://img.shields.io/github/license/Divirad/ADialogueBox) <br>
 	
 [![Author badge](https://img.shields.io/badge/Made_by-Divirad-inactive.svg)](http://divirad.com) 
